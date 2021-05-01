@@ -54,7 +54,7 @@ export default {
     toggleReminder(id) {
       console.log(id);
       this.tasks = this.tasks.map((task) =>
-        task.id === id ? { ...task, reminder: !task.reminder } : task
+        task.id === id ? { ...task, reminder: !task.reminder } : task // ...task means we take the initial task, then we change the reminder for this task 
       );
     },
   },
