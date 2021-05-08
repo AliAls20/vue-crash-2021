@@ -2,8 +2,9 @@
   <header>
     <h1>{{ title }}</h1>
     <Button
-      text="Add Task"
-      color="green"
+      :text="showAddTask ? 'Close' : 'Add Task'"
+      :color="showAddTask ? 'red' : 'green'"
+      @btn-click="$emit('toggle-add-task')"
     />
   </header>
 </template>
@@ -19,6 +20,10 @@ export default {
     title: {
       type: String,
       default: 'Title Tracker'
+    },
+    showAddTask: {
+      type: Boolean,
+      default: false
     }
   }
 }

@@ -1,7 +1,15 @@
 <template>
   <div class="container">
-    <Header title="Task Tracker" />
-    <AddTask @add-task="addTask" />
+    <Header
+      title="Task Tracker"
+      :show-add-task="showAddTask"
+      @toggle-add-task="toggleAddTask"
+    />
+    <div v-show="showAddTask">
+      <AddTask
+        @add-task="addTask"
+      />
+    </div>
     <Tasks
       :tasks="tasks"
       @toggle-reminder="toggleReminder"
@@ -24,7 +32,8 @@ export default {
   },
   data () {
     return {
-      tasks: []
+      tasks: [],
+      showAddTask: false
     }
   },
   created () {
@@ -64,6 +73,9 @@ export default {
       this.tasks = this.tasks.map((task) =>
         task.id === id ? { ...task, reminder: !task.reminder } : task // ...task means we take the initial task, then we change the reminder for this task
       )
+    },
+    toggleAddTask () {
+      this.showAddTask = !this.showAddTask
     }
   }
 }
