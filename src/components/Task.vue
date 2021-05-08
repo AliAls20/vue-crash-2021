@@ -1,11 +1,14 @@
 <template>
   <div
-    @dblclick="$emit('toggle-reminder', task.id)"
     :class="{ reminder: task.reminder, task }"
+    @dblclick="$emit('toggle-reminder', task.id)"
   >
     <h3>
       {{ task.text }}
-      <i @click="$emit('delete-task', task.id)" class="fas fa-times"></i>
+      <i
+        class="fas fa-times"
+        @click="$emit('delete-task', task.id)"
+      />
     </h3>
     <p>{{ task.day }}</p>
   </div>

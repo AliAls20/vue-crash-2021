@@ -1,7 +1,10 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
-    <Button text="Add Task" color="green" />
+    <Button
+      text="Add Task"
+      color="green"
+    />
   </header>
 </template>
 
@@ -9,14 +12,14 @@
 import Button from './Button'
 export default {
   name: 'Header',
+  components: {
+    Button
+  },
   props: {
     title: {
       type: String,
       default: 'Title Tracker'
     }
-  },
-  components: {
-    Button
   }
 }
 </script>

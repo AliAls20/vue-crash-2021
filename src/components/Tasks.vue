@@ -1,27 +1,30 @@
 <template>
-<div>
-  <div v-for="task in tasks" :key="task.id">
-    <Task
-      @toggle-reminder="$emit('toggle-reminder', task.id)"
-      @delete-task="$emit('delete-task', task.id)"
-      :task="task"
-    />
+  <div>
+    <div
+      v-for="task in tasks"
+      :key="task.id"
+    >
+      <Task
+        :task="task"
+        @toggle-reminder="$emit('toggle-reminder', task.id)"
+        @delete-task="$emit('delete-task', task.id)"
+      />
+    </div>
   </div>
-</div>
 </template>
 
 <script>
 import Task from './Task'
 export default {
   name: 'Tasks',
+  components: {
+    Task
+  },
   props: {
     tasks: {
       type: Array,
       default: []
     }
-  },
-  components: {
-    Task
   },
   emits: ['delete-task', 'toggle-reminder'] // this is to remove the warning
 }

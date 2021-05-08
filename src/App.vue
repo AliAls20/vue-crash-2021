@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <Header title="Task Tracker" />
-    <AddTask @add-task="addTask"/>
+    <AddTask @add-task="addTask" />
     <Tasks
+      :tasks="tasks"
       @toggle-reminder="toggleReminder"
       @delete-task="deleteTask"
-      :tasks="tasks"
     />
   </div>
 </template>
