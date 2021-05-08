@@ -17,6 +17,12 @@
       "day": "monday 18:00",
       "reminder": true,
       "id": 3
+    },
+    {
+      "text": "test",
+      "day": "test",
+      "reminder": false,
+      "id": 4
     }
   ]
 }
