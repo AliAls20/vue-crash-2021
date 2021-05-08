@@ -1,4 +1,5 @@
 <template>
+<div>
   <div v-for="task in tasks" :key="task.id">
     <Task
       @toggle-reminder="$emit('toggle-reminder', task.id)"
@@ -6,6 +7,7 @@
       :task="task"
     />
   </div>
+</div>
 </template>
 
 <script>
