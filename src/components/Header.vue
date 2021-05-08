@@ -6,19 +6,19 @@
 </template>
 
 <script>
-import Button from "./Button";
+import Button from './Button'
 export default {
-  name: "Header",
+  name: 'Header',
   props: {
     title: {
       type: String,
-      default: "Title Tracker",
-    },
+      default: 'Title Tracker'
+    }
   },
   components: {
-    Button,
-  },
-};
+    Button
+  }
+}
 </script>
 
 <style scoped>

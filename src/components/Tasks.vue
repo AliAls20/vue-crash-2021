@@ -9,18 +9,18 @@
 </template>
 
 <script>
-import Task from "./Task";
+import Task from './Task'
 export default {
-  name: "Tasks",
+  name: 'Tasks',
   props: {
     tasks: {
       type: Array,
-      default: [],
-    },
+      default: []
+    }
   },
   components: {
-    Task,
+    Task
   },
-  emits: ["delete-task", "toggle-reminder"], // this is to remove the warning
-};
+  emits: ['delete-task', 'toggle-reminder'] // this is to remove the warning
+}
 </script>

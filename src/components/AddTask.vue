@@ -25,15 +25,15 @@
 <script>
 export default {
   name: 'AddTask',
-  data() {
+  data () {
     return {
       text: '',
       day: '',
-      reminder: false,
+      reminder: false
     }
   },
   methods: {
-    onSubmit(e) {
+    onSubmit (e) {
       e.preventDefault() // this makes sure it doesn't actually submit
       if (!this.text) {
         alert('Please add a task')
@@ -43,7 +43,7 @@ export default {
         id: Math.floor(Math.random() * 100000),
         text: this.text,
         day: this.day,
-        reminder: this.reminder,
+        reminder: this.reminder
       }
 
       // console.log(newTask)
@@ -52,8 +52,8 @@ export default {
       this.text = ''
       this.day = ''
       this.reminder = false
-    },
-  },
+    }
+  }
 }
 </script>
 

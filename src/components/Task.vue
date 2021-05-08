@@ -13,13 +13,13 @@
 
 <script>
 export default {
-  name: "Task",
+  name: 'Task',
   props: {
     task: {
-      type: Object,
-    },
-  },
-};
+      type: Object
+    }
+  }
+}
 </script>
 
 <style scoped>
