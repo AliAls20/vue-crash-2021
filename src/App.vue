@@ -54,7 +54,9 @@ export default {
       this.tasks = [...this.tasks, task]
     },
     deleteTask (id) {
-      this.tasks = this.tasks.filter((task) => task.id !== id)
+      if (confirm('Are you sure?')) {
+        this.tasks = this.tasks.filter((task) => task.id !== id)
+      }
       console.log('task', id)
     },
     toggleReminder (id) {
